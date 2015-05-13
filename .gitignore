@@ -1,0 +1,3 @@
+# exclude npm build and Mac droppings.
+/node_modules
+.DS_Store
