@@ -7,11 +7,11 @@ RUNNING THE BUILD
 
 navigate into the project root folder and install the npm dependencies:
 
-># npm install
+  npm install
 
 You can then run the build using grunt:
 
-># grunt
+  <pre>grunt</pre>
 
 Use the resulting build/jquery.halftone.min.js file in your jQuery projects whereever you wanted to display a halftone but were too afraid to ask!
 
