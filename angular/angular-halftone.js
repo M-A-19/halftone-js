@@ -19,9 +19,7 @@ app.directive('ngHalftone', function($rootScope) {
         var img = new Image();
 		img.src = iAttrs.image;
               img.onload = function () {
-              eHandle.width = img.width;
-              eHandle.height = img.height;
-              ctx.drawImage(img,0,0,img.width,img.height);
+              reset();
               }
         //Luminance methods
         var lMethods={
@@ -50,6 +48,20 @@ app.directive('ngHalftone', function($rootScope) {
         //register event listener for render event
         $rootScope.$on('render', onRender);
               
+        function onReset(event,canvasID){
+              if (id == canvasID) {
+                reset();
+              }
+        }
+    
+        //register event listener for reset event
+        $rootScope.$on('reset', onReset);
+              
+        function reset(){
+              eHandle.width = img.width;
+              eHandle.height = img.height;
+              ctx.drawImage(img,0,0,img.width,img.height);
+        }
 		
 		function halftone(settings){
                 //make sure its a canvas

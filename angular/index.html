@@ -32,7 +32,7 @@
 			<input type="text" ng-model="data.colour2"  ng-click="show2 = !show2">
 			<color-picker ng-model="data.colour2" ng-show="show2">
 			</color-picker><br />
-			<input type="button" ng-click="reset()" value="Reset" />
+			<input type="button" ng-click="reset('targetCanvas')" value="Reset" />
         <input type="submit" value="Render">
     </form>
     <pre>form = {{data | json}}</pre>

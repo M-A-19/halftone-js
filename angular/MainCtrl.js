@@ -17,8 +17,9 @@
 	 *
 	 * @return void.
 	 */
-	 $scope.reset = function() {
+	 $scope.reset = function(canvasID) {
         $scope.data = angular.copy($scope.defaults);
+        $scope.$broadcast('reset', canvasID);
       };
       
       $scope.render = function(canvasID){
