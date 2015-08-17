@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="Ape">
+
+  <head>
+  <link rel="stylesheet" href="angular-color-picker.css">
+  <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" 
+            src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+    <script src="angular-color-picker.js"></script>
+    <script src="MainCtrl.js"></script>
+    <script src="angular-halftone.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    
+    <h1>{{message}}</h1>
+    
+    <form name="halftoneDemo" ng-submit="render('targetCanvas')">
+			Sample Size: <input type="text" ng-model="data.sample" /><br />
+			Luminosity: <select ng-model="data.luminosity" >
+						  <option value="Standard">Standard</option>
+						  <option value="Mean">Mean</option>
+						  <option value="PerceivedA">PerceivedA</option>
+						  <option value="PerceivedB">PerceivedB</option>
+						</select><br />
+			Foreground Colour: 
+			<input type="text" ng-model="data.colour1" ng-click="show1 = !show1">
+			<color-picker ng-model="data.colour1" ng-show="show1">
+			</color-picker><br />
+			
+			Background Colour: 
+			<input type="text" ng-model="data.colour2"  ng-click="show2 = !show2">
+			<color-picker ng-model="data.colour2" ng-show="show2">
+			</color-picker><br />
+			<input type="button" ng-click="reset()" value="Reset" />
+        <input type="submit" value="Render">
+    </form>
+    <pre>form = {{data | json}}</pre>
+    <canvas ng-halftone data-image="righting_wrongs_b.jpg" id="targetCanvas"></canvas>
+    <img id="base" src="righting_wrongs_b.jpg">
+  </body>
+
+</html>
+
+
