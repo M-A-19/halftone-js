@@ -6,7 +6,7 @@
  *
  * @author Matthew Pearson <matt@enhancedcds.com>
  * @license
- * Copyright (c) 2015 Example Corporation Inc.
+ * Copyright (c) 2015 Matthew Pearson.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
