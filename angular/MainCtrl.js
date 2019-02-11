@@ -30,7 +30,7 @@
       };
 
     $scope.reset();
-    $scope.message = "One of these days I'm going to cut you into little pieces!" + " ( " + $scope.data.sample + "px x " + $scope.data.sample + "px )";
+    $scope.message = "invalid image source" + " ( " + $scope.data.sample + "px x " + $scope.data.sample + "px )";
 
 
   };
