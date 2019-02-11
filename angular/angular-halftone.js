@@ -175,7 +175,6 @@ app.directive('ngHalftone', function($rootScope) {
               }
 
               
-              //And alone dwell for ever, The kings of the sea."
               return out;
               
         }
